@@ -93,18 +93,19 @@ function enlarge(){
 
 
 //// Pop-up appear on click with delay ////
-$("#clickme").click(function(){
-    // This alert will pop up to prove the code is running
-    console.log("Button clicked, opening login window...");
-    
-    // This makes the hidden #window (with your login.html) appear
-    $("#window").css("display", "block"); 
-    $("#window").fadeIn(500);
-});
-
 $(document).ready(function() {
     $("#clickme").on('click', function() {
-        console.log("Button clicked!"); // Check your F12 console for this!
-        $("#window").fadeIn(500).css("display", "block");
+        console.log("Button clicked! Opening BITB window...");
+
+        // Small delay (500ms) to make it look like a real window is opening
+        setTimeout(function() {
+            // .fadeIn() handles the display:block automatically
+            $("#window").fadeIn(500); 
+        }, 500); 
+    });
+
+    // Optional: Make the Exit 'X' work
+    $("#exit").on('click', function() {
+        $("#window").fadeOut(300);
     });
 });

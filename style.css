@@ -104,16 +104,16 @@ body {
 }
 
 #window {
-  color: transparent;
-  background-color: transparent;
-  border-color: transparent;
+  display: none; /* Hide it initially */
+  background-color: white; /* Changed from transparent */
+  border: 1px solid #333; /* Give it a real border */
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 759px; /* title bar height + content height */
-  width: 40%;
+  height: 759px; 
+  width: 400px; /* Use a fixed width like 400px for better centering */
   position: fixed;
   top: 50%;
-  left: 50;
-  transfrom: translate(-50%, -50%);
+  left: 50%; /* Added % */
+  transform: translate(-50%, -50%); /* Fixed spelling */
   z-index: 9999;
 }
 
